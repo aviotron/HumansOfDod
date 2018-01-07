@@ -103,34 +103,34 @@
     
 </div>
 <div class="row medium-up-3 large-up-4">
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/mihir.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/anjali.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/sid.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/saurav.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/bedanta.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/mani.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/darshana.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/vishnusu.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/sathis.jpg">
 </div>
-<div class="column">
+<div class="column gallerycard">
 <img class="box" src="img/mohijeet.jpg">
 </div>
 
@@ -145,6 +145,14 @@
 </ul>
 </div>
 <script src="js/jquery-2.1.4.min.js.download"></script>
+    <script>
+   var cards = $(".gallerycard");
+for(var i = 0; i < cards.length; i++){
+    var target = Math.floor(Math.random() * cards.length -1) + 1;
+    var target2 = Math.floor(Math.random() * cards.length -1) +1;
+    cards.eq(target).before(cards.eq(target2));
+}
+    </script>
 <script src="js/foundation.js.download"></script>
 <script>
       $(document).foundation();
